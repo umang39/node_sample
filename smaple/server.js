@@ -1,0 +1,7 @@
+let exp = require('express')
+let srv = exp()
+let teacherroute = require('./route/teacher')
+srv.use(exp.json())
+srv.use(exp.urlencoded({extended : true}))
+srv.use('/teacher',teacherroute)
+srv.listen(8000)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{!-- <meta name="viewport" content="width=<>, initial-scale=1.0"> --}}
+    <title>Document</title>
+</head>
+<body>
+    <h1>heello</h1>
+    <ul>
+        {{#each person as |person|}}
+        <li>{{person.name}}&nbsp;{{person.age}}</li>
+        {{/each}}
+    </ul>
+    <a href="/add">click here</a>
+</body>
+</html>

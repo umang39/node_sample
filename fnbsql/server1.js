@@ -1,0 +1,16 @@
+let exp = require('express')
+let srv = exp()
+let path = require('path')
+// let db = require('./db')
+// let persons = require('./route/persons')
+srv.use(exp.json())
+srv.use(exp.urlencoded({extended : true}))
+srv.use('/', exp.static(path.join(__dirname, 'public')))
+srv.set('view engine','hbs')
+srv.set('views',__dirname+'/view')
+let personroute = require('./route/persons')
+srv.use('/api',personroute.route)
+
+srv.listen(8080,()=>{
+    console.log("server startes successfully")
+})

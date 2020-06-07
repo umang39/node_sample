@@ -1,0 +1,8 @@
+let express = require('express')
+let srv = express()
+let public_todo = require('./route/todohelp')
+srv.use(express.json())
+srv.use(express.urlencoded({extended : true}))
+srv.use('/',express.static(__dirname + '/public'))
+srv.use('/public',public_todo)
+srv.listen(8080)

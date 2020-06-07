@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type ="text" id = "usrname" placeholder="enter your name">
+    <input type ="email" id = "email" placeholder="enter your email">
+    <input type ="password" id = "pass" placeholder="enter your password">
+       {{!-- <div style="display: flex;"> --}}
+<ul>
+  {{#each product as |p|}}
+       
+       <li class="a">
+            <ul class="b" style="display:inline-block: 100px;background-color:yellow;width:100px;margin:20px;">
+                <li id={{p.product_name}}>{{p.product_name}}</li>
+                <li><button id={{p.product_id}} class="h">{{p.product_id}}</button></li>
+                <li id={{p.price}}>{{p.price}}</li>
+            </ul>
+       </li>
+    
+    {{/each}}
+</ul>
+<form action="/showcart" method="get">
+<button id="cart">cart</button>
+</form>
+  
+    {{!-- </div>        --}}
+    {{!-- <form method="POST" action="/">
+    <input type= "text" name="name1">name<br>
+    <input type="text" name ="pass">password<br>
+    <input type="text" name="email">email<br>
+    <input type="number" name ="p_id">p_id<br>
+    <input type="submit">submit</input>
+    </form> --}}
+{{!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> --}}
+<script src="jquey.js"></script>
+<script src="s.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{!-- <form action="/" method="POST" >
+        name <input type="text" name="name">
+        phone <input type="text" name="phone">
+      email  <input type="text" name="email">
+        <input type="submit" name="sub">
+    </form> --}}
+    <table>
+        <tr>
+            <td>
+                name 
+            </td>
+            <td>
+                phone 
+            </td>
+         
+        </tr>
+   
+    {{#each data as |d|}}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+            {{!-- <td>d.email</td> --}}
+        </tr>
+    {{/each}}
+     </table>
+</body>
+</html>
